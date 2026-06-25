@@ -1,0 +1,200 @@
+
+Running 24 tests using 8 workers
+
+[1/24] [chromium] › tests\api\signup-sucess.spec.ts:3:5 › signup com sucesso
+[2/24] [chromium] › tests\api\signin-invalid.spec.ts:3:5 › signin inválido
+[3/24] [chromium] › tests\example.spec.ts:3:5 › has title
+[4/24] [chromium] › tests\api\signin-sucess.spec.ts:3:5 › signin válido
+[5/24] [chromium] › tests\e2e\like-without-login.spec.ts:3:5 › não deve permitir curtir sem autenticação
+[6/24] [chromium] › tests\e2e\signup.spec.ts:3:5 › deve criar uma conta
+[7/24] [chromium] › tests\api\signup-duplicate.spec.ts:3:5 › signup duplicado
+[8/24] [chromium] › tests\example.spec.ts:10:5 › get started link
+  1) [chromium] › tests\api\signup-sucess.spec.ts:3:5 › signup com sucesso ─────────────────────────
+
+    Error: expect(received).toBeTruthy()
+
+    Received: false
+
+      12 |   );
+      13 |
+    > 14 |   expect(response.ok()).toBeTruthy();
+         |                         ^
+      15 | });
+        at C:\Users\Administrador\Downloads\sqa-social-media-main\sqa-social-media-main\tests\tests\api\signup-sucess.spec.ts:14:25
+
+    Error Context: test-results\api-signup-sucess-signup-com-sucesso-chromium\error-context.md
+
+
+  2) [chromium] › tests\api\signin-sucess.spec.ts:3:5 › signin válido ──────────────────────────────
+
+    Error: expect(received).toBeTruthy()
+
+    Received: false
+
+      24 |   );
+      25 |
+    > 26 |   expect(response.ok()).toBeTruthy();
+         |                         ^
+      27 | });
+        at C:\Users\Administrador\Downloads\sqa-social-media-main\sqa-social-media-main\tests\tests\api\signin-sucess.spec.ts:26:25
+
+    Error Context: test-results\api-signin-sucess-signin-válido-chromium\error-context.md
+
+
+[9/24] [firefox] › tests\api\signin-sucess.spec.ts:3:5 › signin válido
+[10/24] [firefox] › tests\api\signin-invalid.spec.ts:3:5 › signin inválido
+[11/24] [firefox] › tests\api\signup-duplicate.spec.ts:3:5 › signup duplicado
+[12/24] [firefox] › tests\api\signup-sucess.spec.ts:3:5 › signup com sucesso
+  3) [firefox] › tests\api\signin-sucess.spec.ts:3:5 › signin válido ───────────────────────────────
+
+    Error: expect(received).toBeTruthy()
+
+    Received: false
+
+      24 |   );
+      25 |
+    > 26 |   expect(response.ok()).toBeTruthy();
+         |                         ^
+      27 | });
+        at C:\Users\Administrador\Downloads\sqa-social-media-main\sqa-social-media-main\tests\tests\api\signin-sucess.spec.ts:26:25
+
+    Error Context: test-results\api-signin-sucess-signin-válido-firefox\error-context.md
+
+
+[13/24] [firefox] › tests\e2e\like-without-login.spec.ts:3:5 › não deve permitir curtir sem autenticação
+[14/24] [firefox] › tests\example.spec.ts:3:5 › has title
+  4) [firefox] › tests\api\signup-sucess.spec.ts:3:5 › signup com sucesso ──────────────────────────
+
+    Error: expect(received).toBeTruthy()
+
+    Received: false
+
+      12 |   );
+      13 |
+    > 14 |   expect(response.ok()).toBeTruthy();
+         |                         ^
+      15 | });
+        at C:\Users\Administrador\Downloads\sqa-social-media-main\sqa-social-media-main\tests\tests\api\signup-sucess.spec.ts:14:25
+
+    Error Context: test-results\api-signup-sucess-signup-com-sucesso-firefox\error-context.md
+
+
+[15/24] [firefox] › tests\e2e\signup.spec.ts:3:5 › deve criar uma conta
+[16/24] [firefox] › tests\example.spec.ts:10:5 › get started link
+[17/24] [webkit] › tests\api\signin-invalid.spec.ts:3:5 › signin inválido
+[18/24] [webkit] › tests\api\signup-duplicate.spec.ts:3:5 › signup duplicado
+[19/24] [webkit] › tests\api\signup-sucess.spec.ts:3:5 › signup com sucesso
+  5) [webkit] › tests\api\signup-sucess.spec.ts:3:5 › signup com sucesso ───────────────────────────
+
+    Error: expect(received).toBeTruthy()
+
+    Received: false
+
+      12 |   );
+      13 |
+    > 14 |   expect(response.ok()).toBeTruthy();
+         |                         ^
+      15 | });
+        at C:\Users\Administrador\Downloads\sqa-social-media-main\sqa-social-media-main\tests\tests\api\signup-sucess.spec.ts:14:25
+
+    Error Context: test-results\api-signup-sucess-signup-com-sucesso-webkit\error-context.md
+
+
+[20/24] [webkit] › tests\api\signin-sucess.spec.ts:3:5 › signin válido
+  6) [webkit] › tests\api\signin-sucess.spec.ts:3:5 › signin válido ────────────────────────────────
+
+    Error: expect(received).toBeTruthy()
+
+    Received: false
+
+      24 |   );
+      25 |
+    > 26 |   expect(response.ok()).toBeTruthy();
+         |                         ^
+      27 | });
+        at C:\Users\Administrador\Downloads\sqa-social-media-main\sqa-social-media-main\tests\tests\api\signin-sucess.spec.ts:26:25
+
+    Error Context: test-results\api-signin-sucess-signin-válido-webkit\error-context.md
+
+
+[21/24] [webkit] › tests\e2e\like-without-login.spec.ts:3:5 › não deve permitir curtir sem autenticação
+[22/24] [webkit] › tests\e2e\signup.spec.ts:3:5 › deve criar uma conta
+[23/24] [webkit] › tests\example.spec.ts:10:5 › get started link
+[24/24] [webkit] › tests\example.spec.ts:3:5 › has title
+  7) [chromium] › tests\e2e\signup.spec.ts:3:5 › deve criar uma conta ──────────────────────────────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.fill: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByLabel(/email/i)
+
+
+       8 |   await page.getByRole('button', { name: 'Criar Conta' }).click();
+       9 |
+    > 10 |   await page.getByLabel(/email/i).fill(email);
+         |                                   ^
+      11 |
+      12 |   const passwords = page.locator('input[type="password"]');
+      13 |
+        at C:\Users\Administrador\Downloads\sqa-social-media-main\sqa-social-media-main\tests\tests\e2e\signup.spec.ts:10:35
+
+    Error Context: test-results\e2e-signup-deve-criar-uma-conta-chromium\error-context.md
+
+
+  8) [firefox] › tests\e2e\signup.spec.ts:3:5 › deve criar uma conta ───────────────────────────────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.fill: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByLabel(/email/i)
+
+
+       8 |   await page.getByRole('button', { name: 'Criar Conta' }).click();
+       9 |
+    > 10 |   await page.getByLabel(/email/i).fill(email);
+         |                                   ^
+      11 |
+      12 |   const passwords = page.locator('input[type="password"]');
+      13 |
+        at C:\Users\Administrador\Downloads\sqa-social-media-main\sqa-social-media-main\tests\tests\e2e\signup.spec.ts:10:35
+
+    Error Context: test-results\e2e-signup-deve-criar-uma-conta-firefox\error-context.md
+
+
+  9) [webkit] › tests\e2e\signup.spec.ts:3:5 › deve criar uma conta ────────────────────────────────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.fill: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByLabel(/email/i)
+
+
+       8 |   await page.getByRole('button', { name: 'Criar Conta' }).click();
+       9 |
+    > 10 |   await page.getByLabel(/email/i).fill(email);
+         |                                   ^
+      11 |
+      12 |   const passwords = page.locator('input[type="password"]');
+      13 |
+        at C:\Users\Administrador\Downloads\sqa-social-media-main\sqa-social-media-main\tests\tests\e2e\signup.spec.ts:10:35
+
+    Error Context: test-results\e2e-signup-deve-criar-uma-conta-webkit\error-context.md
+
+
+  9 failed
+    [chromium] › tests\api\signin-sucess.spec.ts:3:5 › signin válido ───────────────────────────────
+    [chromium] › tests\api\signup-sucess.spec.ts:3:5 › signup com sucesso ──────────────────────────
+    [chromium] › tests\e2e\signup.spec.ts:3:5 › deve criar uma conta ───────────────────────────────
+    [firefox] › tests\api\signin-sucess.spec.ts:3:5 › signin válido ────────────────────────────────
+    [firefox] › tests\api\signup-sucess.spec.ts:3:5 › signup com sucesso ───────────────────────────
+    [firefox] › tests\e2e\signup.spec.ts:3:5 › deve criar uma conta ────────────────────────────────
+    [webkit] › tests\api\signin-sucess.spec.ts:3:5 › signin válido ─────────────────────────────────
+    [webkit] › tests\api\signup-sucess.spec.ts:3:5 › signup com sucesso ────────────────────────────
+    [webkit] › tests\e2e\signup.spec.ts:3:5 › deve criar uma conta ─────────────────────────────────
+  15 passed (33.0s)
+
+[36m  Serving HTML report at http://localhost:9323. Press Ctrl+C to quit.[39m
+Deseja finalizar o arquivo em lotes (S/N)? 

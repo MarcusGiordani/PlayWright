@@ -1,0 +1,53 @@
+
+Running 18 tests using 8 workers
+
+[1/18] [chromium] › tests\api\signin-sucess.spec.ts:3:5 › signin válido
+[2/18] [chromium] › tests\api\signup-sucess.spec.ts:3:5 › signup com sucesso
+[3/18] [chromium] › tests\e2e\like-without-login.spec.ts:3:5 › não deve permitir curtir sem autenticação
+[4/18] [firefox] › tests\api\signin-sucess.spec.ts:3:5 › signin válido
+[5/18] [chromium] › tests\api\signin-invalid.spec.ts:3:5 › signin inválido
+[6/18] [chromium] › tests\e2e\signup.spec.ts:3:5 › deve abrir a tela de cadastro e preencher o formulário
+[7/18] [chromium] › tests\api\signup-duplicate.spec.ts:3:5 › signup duplicado
+[8/18] [firefox] › tests\api\signin-invalid.spec.ts:3:5 › signin inválido
+[9/18] [firefox] › tests\e2e\signup.spec.ts:3:5 › deve abrir a tela de cadastro e preencher o formulário
+[10/18] [firefox] › tests\api\signup-duplicate.spec.ts:3:5 › signup duplicado
+[11/18] [firefox] › tests\api\signup-sucess.spec.ts:3:5 › signup com sucesso
+[12/18] [webkit] › tests\api\signin-invalid.spec.ts:3:5 › signin inválido
+[13/18] [webkit] › tests\api\signin-sucess.spec.ts:3:5 › signin válido
+[14/18] [firefox] › tests\e2e\like-without-login.spec.ts:3:5 › não deve permitir curtir sem autenticação
+[15/18] [webkit] › tests\api\signup-sucess.spec.ts:3:5 › signup com sucesso
+[16/18] [webkit] › tests\e2e\signup.spec.ts:3:5 › deve abrir a tela de cadastro e preencher o formulário
+[17/18] [webkit] › tests\api\signup-duplicate.spec.ts:3:5 › signup duplicado
+[18/18] [webkit] › tests\e2e\like-without-login.spec.ts:3:5 › não deve permitir curtir sem autenticação
+  1) [webkit] › tests\e2e\signup.spec.ts:3:5 › deve abrir a tela de cadastro e preencher o formulário 
+
+    Error: expect(locator).toHaveValue(expected) failed
+
+    Locator:  locator('input[type="email"]')
+    Expected: "teste1782333469440@gmail.com"
+    Received: ""
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveValue" with timeout 5000ms
+      - waiting for locator('input[type="email"]')
+        14 × locator resolved to <input value="" type="email" placeholder="seu@email.com"/>
+           - unexpected value ""
+
+
+      14 |   await passwords.nth(1).fill(senha);
+      15 |
+    > 16 |   await expect(page.locator('input[type="email"]')).toHaveValue(email);
+         |                                                     ^
+      17 | });
+        at C:\Users\Administrador\Downloads\sqa-social-media-main\sqa-social-media-main\tests\tests\e2e\signup.spec.ts:16:53
+
+    Error Context: test-results\e2e-signup-deve-abrir-a-te-5a147-ro-e-preencher-o-formulário-webkit\error-context.md
+
+
+  1 failed
+    [webkit] › tests\e2e\signup.spec.ts:3:5 › deve abrir a tela de cadastro e preencher o formulário 
+  17 passed (6.7s)
+
+[36m  Serving HTML report at http://localhost:9323. Press Ctrl+C to quit.[39m
+Deseja finalizar o arquivo em lotes (S/N)? 
