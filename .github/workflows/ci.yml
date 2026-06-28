@@ -18,7 +18,7 @@ jobs:
         ports:
           - 3306:3306
         options: >-
-          --health-cmd="mysqladmin ping -h 127.0.0.1"
+          --health-cmd="mysqladmin ping -h 127.0.0.1 -u root --password=Pa157984152ria!"
           --health-interval=10s
           --health-timeout=5s
           --health-retries=10
@@ -61,6 +61,11 @@ jobs:
       # ── Start services for Playwright ────────────────────────────────────
       - name: Start backend
         working-directory: api
+        env:
+          SPRING_DATASOURCE_URL: "jdbc:mysql://127.0.0.1:3306/socialmedia?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC"
+          SPRING_DATASOURCE_USERNAME: root
+          SPRING_DATASOURCE_PASSWORD: Pa157984152ria!
+          SERVER_ADDRESS: "0.0.0.0"
         run: nohup ./mvnw spring-boot:run > /tmp/backend.log 2>&1 &
 
       - name: Start frontend
@@ -70,20 +75,20 @@ jobs:
       - name: Wait for backend (port 8080)
         run: |
           echo "Waiting for backend..."
-          for i in $(seq 1 36); do
+          for i in $(seq 1 60); do
             STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
               -X POST http://localhost:8080/auth/signin \
               -H "Content-Type: application/json" \
               -d '{"email":"ci@test.com","password":"Ci@12345"}' \
-              --connect-timeout 3 --max-time 5 2>/dev/null)
+              --connect-timeout 3 --max-time 5 2>/dev/null || echo "000")
             if [ -n "$STATUS" ] && [ "$STATUS" != "000" ]; then
               echo "Backend ready (HTTP $STATUS)"
               exit 0
             fi
-            echo "  attempt $i/36 — not ready, retrying in 5s..."
+            echo "  attempt $i/60 — not ready, retrying in 5s..."
             sleep 5
           done
-          echo "Backend did not respond after 3 minutes."
+          echo "Backend did not respond after 5 minutes."
           tail -60 /tmp/backend.log
           exit 1
 
@@ -93,7 +98,7 @@ jobs:
           for i in $(seq 1 24); do
             STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
               http://localhost:3000 \
-              --connect-timeout 3 --max-time 5 2>/dev/null)
+              --connect-timeout 3 --max-time 5 2>/dev/null || echo "000")
             if [ -n "$STATUS" ] && [ "$STATUS" != "000" ]; then
               echo "Frontend ready (HTTP $STATUS)"
               exit 0
